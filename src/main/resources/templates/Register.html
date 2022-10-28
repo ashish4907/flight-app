@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Index</title>
+  </head>
+  <body>
+    <h1>Create New Account</h1>
+
+    <form action="saveReg" method="post">
+      <label>First name:</label>
+      <input type="text" name="firstName" /><br />
+      <label>Last name:</label>
+      <input type="text" name="lastName" /><br />
+      <label>Email:</label>
+      <input type="email" name="email" /><br />
+      <label>Password:</label>
+      <input type="text" name="password" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
