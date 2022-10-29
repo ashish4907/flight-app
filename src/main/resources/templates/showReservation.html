@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Reservation Details</h1>
+<tr th:each="flight : ${flight}">
+    Flight Number: <td th:text="${flight.flightNumber}">FlightNumber</td><br>
+    Operating Airlines:  <td th:text="${flight.operatingAirlines}">FlightNumber</td><br>
+    Departure City:  <td th:text="${flight.departureCity}">FlightNumber</td>
+
+
+
+</tr>
+
+
+</body>
+</html>

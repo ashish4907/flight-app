@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,5 +8,28 @@
   </head>
   <body>
     <h1>Displaying flights</h1>
+
+
+    <table border="1">
+      <tr>
+        <th>Airlines</th>
+        <th>Departure City</th>
+        <th>Arrival City</th>
+        <th>Departure Time</th>
+        <th>Select Flight</th>
+      </tr>
+
+      <tr th:each="findFlights : ${findFlights}">
+        <td th:text="${findFlights.operatingAirlines}"></td>
+        <td th:text="${findFlights.departureCity}"></td>
+        <td th:text="${findFlights.arrivalCity}"></td>
+        <td th:text="${findFlights.estimatedDepartureTime}"></td>
+
+        <td>
+          <a th:href="@{/showCompleteReservation/{id}(id=${findFlights.id})}">Search</a>
+        </td>
+      </tr>
+    </table>
+
   </body>
 </html>
