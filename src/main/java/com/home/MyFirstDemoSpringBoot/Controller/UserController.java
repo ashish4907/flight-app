@@ -1,6 +1,6 @@
 package com.home.MyFirstDemoSpringBoot.Controller;
 
-import com.home.MyFirstDemoSpringBoot.DTO.User;
+import com.home.MyFirstDemoSpringBoot.Entity.User;
 import com.home.MyFirstDemoSpringBoot.Repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

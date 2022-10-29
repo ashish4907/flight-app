@@ -7,14 +7,47 @@
 <body>
 <h1>Reservation Details</h1>
 <tr th:each="flight : ${flight}">
-    Flight Number: <td th:text="${flight.flightNumber}">FlightNumber</td><br>
-    Operating Airlines:  <td th:text="${flight.operatingAirlines}">FlightNumber</td><br>
-    Departure City:  <td th:text="${flight.departureCity}">FlightNumber</td>
-
-
-
+    Flight Number:
+    <td th:text="${flight.flightNumber}"></td>
+    <br>
+    Operating Airlines:
+    <td th:text="${flight.operatingAirlines}"></td>
+    <br>
+    Departure City:
+    <td th:text="${flight.departureCity}"></td>
+    <br>
+    Arrival City:
+    <td th:text="${flight.arrivalCity}"></td>
+    <br>
+    Departure Date:
+    <td th:text="${flight.dateOfDeparture}"></td>
 </tr>
 
+<h2>Passenger Details</h2>
+
+<form action="completeReservation" method="post">
+    <label>First name:</label>
+    <input type="text" name="firstName"/><br/>
+    <label>Middle name:</label>
+    <input type="text" name="middleName"/><br/>
+    <label>Last name:</label>
+    <input type="text" name="lastName"/><br/>
+    <label>Email:</label>
+    <input type="email" name="email"/><br/>
+    <label>Phone:</label>
+    <input type="text" name="phone">  </br>
+    <input type="hidden" name="id" th:value="${flight.id}">
+    <label>Name on the Card:</label>
+    <input type="text" name="nameOnTheCard"></br>
+    <label>Card Number:</label>
+    <input type="text" name="cardNumber"></br>
+    <label>Expiry Date:</label>
+    <input type="text" name="expiryDate"></br>
+    <label>CVV:</label>
+    <input type="text" name="cvv"></br>
+    <input type="submit" value="Complete Reservation"/>
+
+</form>
 
 </body>
 </html>

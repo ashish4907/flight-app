@@ -1,4 +1,4 @@
-package com.home.MyFirstDemoSpringBoot.DTO;
+package com.home.MyFirstDemoSpringBoot.Entity;
 
 import java.sql.Timestamp;
 import java.util.Date;
